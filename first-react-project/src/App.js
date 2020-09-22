@@ -1,16 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Main from './Main'
-import Header from './Header'
-import Footer from './Footer'
+import productsData from './vSchoolProducts'
+import Product from './Product'
 
 function App() {
+  const products = productsData.map(product => <Product key={product.id} product={product} />)
   return (
     <div>
-      <Header />
-      <Main />
-      <Footer />
+      {products}
     </div>
   );
 }

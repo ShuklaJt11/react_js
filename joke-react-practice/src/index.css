@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  height: -webkit-fill-available;
 }
 
 code {
@@ -12,24 +16,13 @@ code {
     monospace;
 }
 
-.product-card {
-  margin: 0 auto;
-  width: 800px;
-  text-align: center;
+p {
+  padding: 0 10px;
+  margin: 5px 0;
 }
 
-.product-name {
-  margin: 10px 0;
-}
-
-.product-description {
-  display: inline;
-  padding-left: 15px;
-  font-style: italic;
-}
-
-.product-price {
-  font-size: 13px;
-  color:#04756F;
-  font-weight: 700;
+.joke-container {
+  margin: 20px auto;
+  border: 1px solid black;
+  max-width: 1000px;
 }
