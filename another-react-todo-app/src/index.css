@@ -62,11 +62,11 @@ h1 {
   margin-right: 10px;
 }
 
-.todo-checkbox:checked + .todo-label {
-  color: #F72C25;
-}
-
 .todo-label {
   margin: 0;
+}
+
+.todo-checkbox:checked + .todo-label {
+  color: #F72C25;
   text-decoration: line-through #F72C25;
 }
