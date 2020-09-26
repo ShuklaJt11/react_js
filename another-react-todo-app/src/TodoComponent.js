@@ -1,14 +1,12 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class TodoComponent extends Component {
-  render() {
-    return (
-      <div className='todo-object'>
-        <input className="todo-checkbox" type="checkbox" checked={this.props.todoData.completed} onChange={() => this.props.checkFunction(this.props.todoData.id)} />
-        <p className="todo-label">{this.props.todoData.text}</p>
-      </div>
-    )
-  }
+function TodoComponent(props) {
+  return (
+    <div className='todo-object'>
+      <input className="todo-checkbox" type="checkbox" checked={props.todoData.completed} onChange={() => props.checkFunction(props.todoData.id)} />
+      <p className="todo-label">{props.todoData.text}</p>
+    </div>
+  )
 }
 
 export default TodoComponent
