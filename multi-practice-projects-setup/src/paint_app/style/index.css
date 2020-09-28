@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 *,
 *:before,
@@ -96,4 +96,21 @@ canvas {
   flex: 1;
   overflow: hidden;
   cursor: crosshair;
-}  
+  width: 100% !important;
+}
+
+.window-size {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  color: black;
+  padding: 5px;
+}
+
+.window-size.hidden {
+  opacity: 0;
+  transition: 1s;
+  visibility: hidden;
+}
