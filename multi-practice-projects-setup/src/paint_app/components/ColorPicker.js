@@ -2,7 +2,6 @@ import React from 'react'
 
 export default function ColorPicker({colors=[], activeColor, setActiveColor}) {
   if (!colors.length) return null
-  console.log(`colorpicker: ${colors}`)
   return (
     <fieldset className="color-picker">
       {colors.map((color, i) => (

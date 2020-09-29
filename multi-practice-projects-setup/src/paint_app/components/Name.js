@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
-export default function Name() {
+const Name = React.memo(() => {
   const [name, setName] = useState('')
-  
+  console.log('rendering name')  
   return (
     <label className="header-name">
       <input 
@@ -14,4 +14,6 @@ export default function Name() {
       />
     </label>
   )
-}
+})
+
+export default Name
