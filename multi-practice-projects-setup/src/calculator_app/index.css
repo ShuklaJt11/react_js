@@ -1,0 +1,184 @@
+/**********************************
+*? Index
+*? 1. Initial Setup
+*? 2. Calculator
+*? 3. Key Basic Setup
+*? 4. Key Type Specific Setup
+*? 5. Key Grid Positions
+**********************************/
+
+/**********************************
+*! 1. Initial Setup
+**********************************/
+:root {
+  --bg-color-1: #c77dff;
+  --bg-color-2: #7b2cbf;
+  --primary-color-1: #f4f3ee;
+  --primary-color-2: #bcb8b1;
+  --secondary-color-1: #8a817c;
+  --secondary-color-2: #e0afa0;
+  --dark-bg-color: #463f3a;
+  --text-color-alternate: #F3F3F3;
+  --solid-black: #333333;
+}
+
+html {
+  font-size: 150%;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(236deg, var(--bg-color-1), var(--bg-color-2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/**********************************
+*! 2. Calculator
+**********************************/
+.calc-body {
+  box-shadow: 0 0 25px 0 var(--solid-black);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.calc-display {
+  background-color: var(--solid-black);
+  color: var(--text-color-alternate);
+  text-align: right;
+  padding: 2rem 1rem 0.75rem;
+  width: 16.25rem;
+  font-size: calc(1rem * 1.2 * 1.2 * 1.2);
+}
+
+.calc-keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 4.562rem);
+  grid-template-areas: 
+    ". . . divide"
+    "seven eight nine multiply"
+    "four five six minus"
+    "one two three plus"
+    "zero dot del result";
+}
+
+/**********************************
+*! 3. Key Basic Setup
+**********************************/
+
+.calc-keyboard > button {
+  font-size: calc(1rem * 1.2);
+  border: 0;
+  padding: 1rem 0;
+  border-radius: 0;
+  color: var(--solid-black);
+}
+
+.calc-keyboard > button:active,
+.calc-keyboard > button:focus,
+.calc-keyboard > button:hover {
+  outline: 0;
+}
+
+.calc-keyboard > button:active {
+  background: var(--dark-bg-color);
+  color: var(--text-color-alternate);
+}
+
+/**********************************
+*! 4. Key Type Specific Setup
+**********************************/
+
+.result {
+  grid-area: result;
+  background: var(--secondary-color-2);
+}
+
+.operation {
+  background: var(--primary-color-2);
+}
+
+.number {
+  background: var(--primary-color-1);
+}
+
+.special {
+  background: var(--secondary-color-1);
+}
+
+/**********************************
+*! 5. Key Grid Positions
+**********************************/
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.del {
+  grid-area: del;
+}
